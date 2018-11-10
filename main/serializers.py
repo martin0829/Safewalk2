@@ -4,7 +4,7 @@ from .models import Walker, Party, Region
 class WalkerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Walker
-        fields = ('username', 'email', 'photo', 'rating', 'emgContact', 'party')
+        fields = ('pk', 'username', 'email', 'photo', 'rating', 'emgContact', 'party')
 
 class PartySerializer(serializers.ModelSerializer):
     walkers = serializers.StringRelatedField(many=True)
